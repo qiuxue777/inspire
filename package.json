@@ -1,5 +1,5 @@
 {
-  "name": "inspire",
+  "name": "My-Project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,7 +19,9 @@
     
     "clean-webpack-plugin": "^4.0.0",
     "express": "^4.17.1", 
-    "open": "^8.2.1"
+    "open": "^8.2.1",
+    
+    "ts-loader": "^9.5.2"
 
   },
   "dependencies": {
