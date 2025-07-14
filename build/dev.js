@@ -9,7 +9,7 @@ const app = express();
 
 const compiler = webpack(config);
 
-app.use(express.static(static));
+app.use(express.static(static));// express.static中间件：设置 static 目录为web服务器的静态资源目录，可以被客户端直接访问
 // app.use(express.static(dist));
 app.use(
   require("webpack-dev-middleware")(compiler, {
@@ -17,6 +17,8 @@ app.use(
     stats: env === "development" ? "errors-only" : { color: true },
   })
 );
+
+app.use(require("webpack-hot-middleware")(compiler));
 
 app.use((req, res) => {
   res.status(404).send('Not found');

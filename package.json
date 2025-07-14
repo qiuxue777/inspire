@@ -16,6 +16,8 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-middleware": "^5.0.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.16",
     "html-webpack-plugin": "^5.5.3",
     "clean-webpack-plugin": "^4.0.0",
     "express": "^4.17.1", 
