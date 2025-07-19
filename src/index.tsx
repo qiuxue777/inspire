@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import NewDiv from "./component/helloworld";
+import Lession49 from "@/component/lession/Lession49";
 
 const rootElement = createRoot(document.getElementById("root")!);
-rootElement.render(<NewDiv/>);
+rootElement.render(<Lession49/>);

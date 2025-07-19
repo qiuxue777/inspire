@@ -32,7 +32,24 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        include: [/src/],
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[name]_[local]_[hash:base64:10]",
+              },
+            },
+          },
+          { loader: "postcss-loader" },
+          { loader: "sass-loader" },
+        ],
+      },
     ],
   },
   plugins: [
