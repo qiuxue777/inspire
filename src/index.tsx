@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import { HashRouter, useRoutes } from "react-router-dom";
 
-import getRouteData from "./route/routes";
+import getRouteData from "./routes/routes";
 
 const [routes] = getRouteData();
 const AppRoutes = () => {
