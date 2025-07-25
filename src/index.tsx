@@ -5,6 +5,9 @@ import { HashRouter, useRoutes } from "react-router-dom";
 
 import getRouteData from "./routes/routes";
 
+import Header from "@/component/layout/Header";
+import Body from "@/component/layout/Body";    
+
 const [routes] = getRouteData();
 const AppRoutes = () => {
     const element = useRoutes(routes);
@@ -14,9 +17,14 @@ const AppRoutes = () => {
 
 const rootElement = createRoot(document.getElementById("root")!);
 rootElement.render(
-    <HashRouter>
+  <>
+    <Header />
+    <Body>
+      <HashRouter>
         <Suspense fallback={<div>App Loading...</div>}>
           <AppRoutes />
         </Suspense>
-    </HashRouter>
+      </HashRouter>
+    </Body>
+  </>
 );
