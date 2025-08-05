@@ -1,6 +1,8 @@
 import React from "react";
 import {RouteObject} from "react-router-dom";
 import lession from "./lession";
+import knowledge from "./knowledge";
+
 
 interface RouteSource{
     component: React.LazyExoticComponent<React.ComponentType<any>>;
@@ -12,6 +14,7 @@ const getRouteData = (): [RouteObject[], {[key: string]: RouteObject}] => {
             component: React.lazy(() => import(/* webpackChunkName: "lession49" */"@/component/lession/Lession49")),
         },
         ...lession,
+        ...knowledge,
         "helloworld": {
             component: React.lazy(() => import(/* webpackChunkName:"helloword" */ "@/component/helloworld")),
         },
